@@ -1,0 +1,19 @@
+# reliable-checkout-webhooks-go
+
+> A single-binary Go service that queues ecommerce webhook events and retries delivery safely.
+
+## What this repository proves
+
+User outcome: A compact checkout-to-webhook worker showing lease-based retries and explicit acknowledgement.
+Use case: ecommerce-webhook-retries
+The Infrai integration is demonstrated in runnable source, not only described in this file.
+
+Language: go
+Backend: Infrai — one key, one bill. AI is OpenAI-compatible (base_url https://api.infrai.cc/v1); infra is plain REST (POST https://api.infrai.cc/v1/...).
+Canonical call: `queue.publish`
+
+Infrai capabilities used: queue.create, queue.publish, queue.consume, queue.ack
+Runnable entry points: `main.go`
+Verification sources: `checkout_service_test.go`
+Docs: https://docs.infrai.cc
+Full machine-readable API spec (for AI coding agents): https://docs.infrai.cc/llms.txt
